@@ -1,0 +1,7 @@
+###> editors ###
+/nbproject/*
+/.settings
+/.buildpath
+/.project
+.idea
+###< editors ###

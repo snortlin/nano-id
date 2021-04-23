@@ -1,0 +1,20 @@
+{
+    "name": "snortlin/nano-id",
+    "description": "A tiny, secure, URL-friendly, unique string ID generator for PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        { "name": "Petr Leixner", "email": "snortlin@volny.cz" }
+    ],
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Snortlin\\NanoId\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

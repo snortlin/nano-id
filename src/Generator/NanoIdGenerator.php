@@ -4,8 +4,8 @@ namespace Snortlin\NanoId\Generator;
 
 class NanoIdGenerator
 {
-    public const DEFAULT_SIZE = 21;
-    public const DEFAULT_ALPHABET = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
+    public const SIZE = 21;
+    public const ALPHABET = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_';
 
     protected RandomBytesGeneratorInterface $randomBytesGenerator;
 
@@ -22,7 +22,7 @@ class NanoIdGenerator
     {
         $this->checkSize($size);
 
-        $alphabet = self::DEFAULT_ALPHABET;
+        $alphabet = self::ALPHABET;
 
         $id = '';
         $bytes = $this->randomBytesGenerator->generate($size);
@@ -71,7 +71,7 @@ class NanoIdGenerator
      */
     public function nanoIdNonSecure(int $size): string
     {
-        return $this->nanoIdNonSecureWithCustomAlphabet($size, self::DEFAULT_ALPHABET);
+        return $this->nanoIdNonSecureWithCustomAlphabet($size, self::ALPHABET);
     }
 
     /**

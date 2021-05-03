@@ -10,9 +10,15 @@ interface NanoIdInterface
 
     public const ALPHABET_NUMBERS = '0123456789';
 
+    public const ALPHABET_NUMBERS_READABLE = '346789';
+
     public const ALPHABET_LOWERCASE = 'abcdefghijklmnopqrstuvwxyz';
 
+    public const ALPHABET_LOWERCASE_READABLE = 'abcdefghijkmnpqrtwxyz';
+
     public const ALPHABET_UPPERCASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    public const ALPHABET_UPPERCASE_READABLE = 'ABCDEFGHIJKMNPQRTWXYZ';
 
     public const ALPHABET_ALPHA_NUMERIC = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 

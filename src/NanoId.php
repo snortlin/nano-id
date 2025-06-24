@@ -18,7 +18,7 @@ class NanoId implements NanoIdInterface
     /**
      * @inheritDoc
      */
-    public static function nanoId(int $size = NanoIdInterface::SIZE_DEFAULT, string $alphabet = null): string
+    public static function nanoId(int $size = NanoIdInterface::SIZE_DEFAULT, ?string $alphabet = null): string
     {
         return self::getFactory()->nanoId($size, $alphabet);
     }
@@ -26,7 +26,7 @@ class NanoId implements NanoIdInterface
     /**
      * @inheritDoc
      */
-    public static function nanoIdNonSecure(int $size = NanoIdInterface::SIZE_DEFAULT, string $alphabet = null): string
+    public static function nanoIdNonSecure(int $size = NanoIdInterface::SIZE_DEFAULT, ?string $alphabet = null): string
     {
         return self::getFactory()->nanoIdNonSecure($size, $alphabet);
     }

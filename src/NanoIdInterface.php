@@ -40,7 +40,7 @@ interface NanoIdInterface
      *
      * @throws \InvalidArgumentException
      */
-    public static function nanoId(int $size = NanoIdGenerator::SIZE, string $alphabet = null): string;
+    public static function nanoId(int $size = NanoIdGenerator::SIZE, ?string $alphabet = null): string;
 
     /**
      * Generates a tiny, secure, URL-friendly, unique string with custom size and optionally with custom alphabet using the faster non-secure generator.
@@ -50,5 +50,5 @@ interface NanoIdInterface
      *
      * @throws \InvalidArgumentException
      */
-    public static function nanoIdNonSecure(int $size = NanoIdGenerator::SIZE, string $alphabet = null): string;
+    public static function nanoIdNonSecure(int $size = NanoIdGenerator::SIZE, ?string $alphabet = null): string;
 }

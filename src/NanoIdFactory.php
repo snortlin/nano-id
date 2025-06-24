@@ -10,7 +10,7 @@ class NanoIdFactory implements NanoIdFactoryInterface
 {
     protected NanoIdGenerator $nanoIdGenerator;
 
-    public function __construct(RandomBytesGeneratorInterface $randomBytesGenerator = null)
+    public function __construct(?RandomBytesGeneratorInterface $randomBytesGenerator = null)
     {
         $this->nanoIdGenerator = new NanoIdGenerator($randomBytesGenerator ?? new RandomBytesGenerator());
     }
@@ -18,7 +18,7 @@ class NanoIdFactory implements NanoIdFactoryInterface
     /**
      * @inheritDoc
      */
-    public function nanoId(int $size, string $alphabet = null): string
+    public function nanoId(int $size, ?string $alphabet = null): string
     {
         return null === $alphabet
             ? $this->nanoIdGenerator->nanoId($size)
@@ -28,7 +28,7 @@ class NanoIdFactory implements NanoIdFactoryInterface
     /**
      * @inheritDoc
      */
-    public function nanoIdNonSecure(int $size, string $alphabet = null): string
+    public function nanoIdNonSecure(int $size, ?string $alphabet = null): string
     {
         return null === $alphabet
             ? $this->nanoIdGenerator->nanoIdNonSecure($size)

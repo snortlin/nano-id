@@ -45,7 +45,7 @@ class NanoIdGenerator
 
         $id = '';
         $length = strlen($alphabet);
-        $mask = (2 << log($length - 1) / M_LN2) - 1;
+        $mask = (2 << (int)(log($length - 1) / M_LN2)) - 1;
         $step = (int)ceil(1.6 * $mask * $size / $length);
 
         while (true) {
